@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -14,23 +15,23 @@ const Hero = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Avicola Di Raffaele
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-2">
+            F.LLI. Di Raffaele
           </h1>
+          <h2 className="text-2xl md:text-4xl font-medium text-white mb-2">
+            Azienda Avicola
+          </h2>
           <p className="text-xl md:text-2xl text-white mb-8">
             Qualità e tradizione dal 1945
           </p>
-          <Button
-            variant="default"
-            className="bg-avicola-green hover:bg-avicola-darkgreen text-white px-6 py-3 rounded-md text-lg"
-            onClick={() => {
-              document.querySelector("#products")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            Scopri i nostri prodotti
-          </Button>
+          <Link to="/products">
+            <Button
+              variant="default"
+              className="bg-avicola-green hover:bg-avicola-darkgreen text-white px-6 py-3 rounded-md text-lg"
+            >
+              Scopri i nostri prodotti
+            </Button>
+          </Link>
         </div>
       </div>
       
