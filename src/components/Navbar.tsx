@@ -46,7 +46,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/f8063558-ff7e-4dd2-a79a-16c5a31b1f76.png" 
               alt="F.lli Di Raffaele Logo" 
-              className="h-16 md:h-20"
+              className="h-20 md:h-28"
             />
           </Link>
 
