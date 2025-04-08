@@ -1,6 +1,7 @@
 
 import React, { useEffect } from "react";
-import { Egg, ChevronRight, Utensils, Package } from "lucide-react";
+import { Egg, ChevronRight, Utensils, Package, Plus } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({
   title,
@@ -28,6 +29,26 @@ const ProductCard = ({
       </h3>
       <p className="text-gray-600 text-center">{description}</p>
     </div>
+  );
+};
+
+const ViewMoreCard = () => {
+  return (
+    <Link 
+      to="/products" 
+      className="animate-on-scroll group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-100 flex flex-col items-center justify-center h-full"
+      style={{ animationDelay: "450ms" }}
+    >
+      <div className="flex justify-center mb-6">
+        <div className="p-4 bg-avicola-green/20 rounded-full group-hover:bg-avicola-green/40 transition-colors">
+          <Plus className="w-10 h-10 text-avicola-darkgreen" />
+        </div>
+      </div>
+      <h3 className="text-xl font-semibold mb-3 text-avicola-darkgreen text-center">
+        Visualizza Altri Prodotti
+      </h3>
+      <p className="text-gray-600 text-center">Scopri la gamma completa dei nostri prodotti</p>
+    </Link>
   );
 };
 
@@ -88,7 +109,7 @@ const ProductsSection = () => {
           Qualità genuina per ogni esigenza
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {products.map((product, index) => (
             <ProductCard
               key={index}
@@ -98,16 +119,17 @@ const ProductsSection = () => {
               delay={product.delay}
             />
           ))}
+          <ViewMoreCard />
         </div>
 
         <div className="mt-12 text-center animate-on-scroll">
-          <a
-            href="#contact"
+          <Link
+            to="/products"
             className="inline-flex items-center text-avicola-darkgreen hover:text-avicola-green transition-colors font-medium"
           >
             Contattaci per informazioni sui prodotti
             <ChevronRight className="ml-1 h-5 w-5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
