@@ -25,7 +25,7 @@ const HistorySection = () => {
   }, []);
 
   return (
-    <section id="history" className="py-20 bg-white">
+    <section id="history" className="py-20 bg-avicola-tan/10">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-avicola-darkgreen">
           La Nostra Storia

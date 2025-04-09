@@ -88,7 +88,7 @@ const ContactSection = () => {
               className="mt-4 bg-avicola-darkgreen hover:bg-avicola-green text-white"
               onClick={() => {
                 window.open(
-                  "https://wa.me/393922566798?text=Ciao,%20sono%20interessato%20alla%20vendita%20all'ingrosso.",
+                  "https://wa.me/393385983663?text=Ciao,%20sono%20interessato%20alla%20vendita%20all'ingrosso.",
                   "_blank",
                   "noopener noreferrer"
                 );
@@ -111,14 +111,26 @@ const ContactSection = () => {
             <ContactItem
               icon={Phone}
               title="Telefono"
-              content="392 256 6798"
-              href="tel:+393922566798"
+              content="Tel. 081 8308441"
+              href="tel:+390818308441"
+            />
+            <ContactItem
+              icon={Phone}
+              title="Tel/Fax"
+              content="081 8342432"
+              href="tel:+390818342432"
+            />
+            <ContactItem
+              icon={Phone}
+              title="Cellulare"
+              content="338 598 3663"
+              href="tel:+393385983663"
             />
             <ContactItem
               icon={Mail}
               title="Email"
-              content="lelesteam2012@hotmail.it"
-              href="mailto:lelesteam2012@hotmail.it"
+              content="info@avicoladiraffaele.it"
+              href="mailto:info@avicoladiraffaele.it"
             />
             <ContactItem
               icon={MapPin}
@@ -131,7 +143,7 @@ const ContactSection = () => {
                 className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white flex items-center justify-center gap-2"
                 onClick={() => {
                   window.open(
-                    "https://wa.me/393922566798?text=Ciao,%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti.",
+                    "https://wa.me/393385983663?text=Ciao,%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti.",
                     "_blank",
                     "noopener noreferrer"
                   );

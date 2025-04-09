@@ -33,16 +33,24 @@ const AboutSection = () => {
           Chi Siamo
         </h2>
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div ref={sectionRef} className="animate-on-scroll">
-            <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-              Siamo un'azienda a conduzione familiare con anni di esperienza nella rivendita
-              di prodotti avicoli. Offriamo uova fresche, pollame selezionato 
-              e mangimi di qualità a privati, negozi e ristoranti.
+          <div ref={sectionRef} className="animate-on-scroll space-y-4">
+            <p className="text-gray-700">
+              Siamo un'azienda a conduzione familiare, attiva da oltre 75 anni nel settore avicolo.
+              Oggi lavoriamo esclusivamente all'ingrosso, offrendo prodotti freschi e selezionati a negozi, supermercati, macellerie, gastronomie e ristoranti.
             </p>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-700 mt-4">
-              Dal 1945, la nostra famiglia porta avanti questa attività con passione e dedizione, 
-              mantenendo vive le tradizioni e garantendo sempre la massima qualità in ogni 
-              aspetto del nostro lavoro.
+            <p className="text-gray-700">
+              Ogni giorno prepariamo involtini, spiedini, filetti, salsicce, bocconcini, fuselli e molto altro, con carni fresche e aromi naturali di nostra selezione.
+              Il tutto nel pieno rispetto delle normative vigenti e con un'attenzione rigorosa alla catena del freddo.
+            </p>
+            <p className="text-gray-700">
+              La fiducia che abbiamo costruito negli anni è il risultato di un lavoro costante, fatto di serietà, puntualità e cura per ogni singolo cliente.
+              La terza generazione della famiglia Di Raffaele continua oggi con lo stesso impegno di sempre, guardando al futuro senza dimenticare da dove tutto è cominciato.
+            </p>
+            <p className="text-gray-700">
+              Effettuiamo consegne rapide in tutta la Campania oppure ritiro diretto in sede, in base alle esigenze del cliente.
+            </p>
+            <p className="font-medium text-avicola-darkgreen italic">
+              Quello che facciamo, lo facciamo da sempre con il cuore. E si sente ad ogni morso.
             </p>
           </div>
           <div className="animate-on-scroll">
