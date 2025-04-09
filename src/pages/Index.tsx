@@ -7,6 +7,7 @@ import ProductsSection from "@/components/ProductsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import HistorySection from "@/components/HistorySection";
 
 const Index = () => {
   useEffect(() => {
@@ -41,6 +42,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <AboutSection />
+      <HistorySection />
       <ProductsSection />
       <ContactSection />
       <Footer />

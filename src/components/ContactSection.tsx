@@ -62,63 +62,8 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-avicola-tan/30">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-avicola-darkgreen">
-          Contattaci
-        </h2>
-        <p className="text-xl text-gray-600 mb-10 text-center">
-          Siamo a tua disposizione
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-6 animate-on-scroll">
-            <ContactItem
-              icon={Phone}
-              title="Telefono"
-              content="392 256 6798"
-              href="tel:+393922566798"
-            />
-            <ContactItem
-              icon={Mail}
-              title="Email"
-              content="lelesteam2012@hotmail.it"
-              href="mailto:lelesteam2012@hotmail.it"
-            />
-            <ContactItem
-              icon={MapPin}
-              title="Località"
-              content="Frattaminore (NA)"
-            />
-
-            <div className="pt-4">
-              <Button
-                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white flex items-center justify-center gap-2"
-                onClick={() => {
-                  window.open(
-                    "https://wa.me/393922566798?text=Ciao,%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti.",
-                    "_blank",
-                    "noopener noreferrer"
-                  );
-                }}
-              >
-                <MessageSquare className="h-5 w-5" />
-                Contattaci su WhatsApp
-              </Button>
-            </div>
-          </div>
-
-          <div className="animate-on-scroll h-[400px]">
-            <iframe
-              title="Mappa"
-              className="w-full h-full rounded-lg shadow-md border border-gray-200"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12096.384228693051!2d14.262999813424636!3d40.95642278901889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b088f11e8a773%3A0xabcdef26183bcd94!2s80020%20Frattaminore%20NA!5e0!3m2!1sit!2sit!4v1585307601234!5m2!1sit!2sit"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-
         {/* Sezione vendita all'ingrosso */}
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-md border border-gray-100 animate-on-scroll">
+        <div className="mb-16 bg-white p-8 rounded-lg shadow-md border border-gray-100 animate-on-scroll">
           <div className="flex items-center justify-center mb-6">
             <div className="p-4 bg-avicola-green/20 rounded-full">
               <Truck className="w-10 h-10 text-avicola-darkgreen" />
@@ -151,6 +96,61 @@ const ContactSection = () => {
             >
               Richiedi Informazioni per l'Ingrosso
             </Button>
+          </div>
+        </div>
+
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-avicola-darkgreen">
+          Contattaci
+        </h2>
+        <p className="text-xl text-gray-600 mb-10 text-center">
+          Siamo a tua disposizione
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-6 animate-on-scroll">
+            <ContactItem
+              icon={Phone}
+              title="Telefono"
+              content="392 256 6798"
+              href="tel:+393922566798"
+            />
+            <ContactItem
+              icon={Mail}
+              title="Email"
+              content="lelesteam2012@hotmail.it"
+              href="mailto:lelesteam2012@hotmail.it"
+            />
+            <ContactItem
+              icon={MapPin}
+              title="Località"
+              content="Frattaminore (NA), Via Spagnuolo 28"
+            />
+
+            <div className="pt-4">
+              <Button
+                className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white flex items-center justify-center gap-2"
+                onClick={() => {
+                  window.open(
+                    "https://wa.me/393922566798?text=Ciao,%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti.",
+                    "_blank",
+                    "noopener noreferrer"
+                  );
+                }}
+              >
+                <MessageSquare className="h-5 w-5" />
+                Contattaci su WhatsApp
+              </Button>
+            </div>
+          </div>
+
+          <div className="animate-on-scroll h-[400px]">
+            <iframe
+              title="Mappa"
+              className="w-full h-full rounded-lg shadow-md border border-gray-200"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12096.384228693051!2d14.262999813424636!3d40.95642278901889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b088f11e8a773%3A0xabcdef26183bcd94!2s80020%20Frattaminore%20NA!5e0!3m2!1sit!2sit!4v1585307601234!5m2!1sit!2sit"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>

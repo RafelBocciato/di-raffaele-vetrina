@@ -13,7 +13,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/f8063558-ff7e-4dd2-a79a-16c5a31b1f76.png" 
               alt="F.lli Di Raffaele Logo" 
-              className="h-16 mr-4"
+              className="h-20 mr-4"
             />
             <div>
               <h3 className="text-xl font-bold">F.lli Di Raffaele - Azienda Avicola</h3>

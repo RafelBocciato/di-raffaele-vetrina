@@ -42,6 +42,15 @@ const ProductDetail = () => {
       </div>
     );
   }
+
+  const handleWhatsAppClick = () => {
+    const productName = encodeURIComponent(product.name);
+    window.open(
+      `https://wa.me/393922566798?text=Ciao,%20vorrei%20avere%20informazioni%20sul%20prodotto:%20${productName}`,
+      "_blank",
+      "noopener noreferrer"
+    );
+  };
   
   return (
     <div className="min-h-screen">
@@ -114,10 +123,16 @@ const ProductDetail = () => {
                 <h3 className="text-lg font-medium mb-2">Per informazioni</h3>
                 <p className="mb-4">Contattaci via telefono o WhatsApp per richiedere informazioni su questo prodotto.</p>
                 <div className="flex flex-wrap gap-3">
-                  <Button className="bg-avicola-green hover:bg-avicola-darkgreen">
+                  <Button 
+                    className="bg-[#25D366] hover:bg-[#20BD5A] text-white"
+                    onClick={handleWhatsAppClick}
+                  >
                     Contatta via WhatsApp
                   </Button>
-                  <Button variant="outline">
+                  <Button 
+                    variant="outline"
+                    onClick={() => window.open("tel:+393922566798", "_blank")}
+                  >
                     Telefono: 392 256 6798
                   </Button>
                 </div>

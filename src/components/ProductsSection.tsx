@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-import { Egg, ChevronRight, Utensils, Package, Plus, ShoppingBag, ChefHat, Heart } from "lucide-react";
+import { Egg, ChevronRight, ChefHat, Package, Plus, ShoppingBag, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({
