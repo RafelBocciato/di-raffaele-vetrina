@@ -2,11 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +25,33 @@ const Navbar = () => {
     };
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    setIsOpen(false);
+    
+    // If we're not on the home page, navigate there first
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // We need to wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If we're already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Chi Siamo", href: "/#about" },
-    { name: "Prodotti", href: "/products" },
-    { name: "Contatti", href: "/#contact" },
+    { name: "Home", action: () => navigate("/") },
+    { name: "Chi Siamo", action: () => scrollToSection("about") },
+    { name: "Prodotti", action: () => navigate("/products") },
+    { name: "Contatti", action: () => scrollToSection("contact") },
   ];
 
   return (
@@ -53,13 +76,13 @@ const Navbar = () => {
           {/* Menu per desktop */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                to={item.href}
+                onClick={item.action}
                 className="font-medium text-gray-800 hover:text-avicola-green transition-colors"
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
           </div>
 
@@ -78,14 +101,13 @@ const Navbar = () => {
           <div className="md:hidden py-4 px-2">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <Link
+                <button
                   key={item.name}
-                  to={item.href}
-                  className="font-medium text-gray-800 hover:text-avicola-green transition-colors py-2"
-                  onClick={() => setIsOpen(false)}
+                  onClick={item.action}
+                  className="font-medium text-gray-800 hover:text-avicola-green transition-colors py-2 text-left"
                 >
                   {item.name}
-                </Link>
+                </button>
               ))}
             </div>
           </div>

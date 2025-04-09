@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-import { Egg, ChevronRight, Utensils, Package, Plus } from "lucide-react";
+import { Egg, ChevronRight, Utensils, Package, Plus, ShoppingBag, ChefHat, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({
@@ -37,7 +37,7 @@ const ViewMoreCard = () => {
     <Link 
       to="/products" 
       className="animate-on-scroll group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-100 flex flex-col items-center justify-center h-full"
-      style={{ animationDelay: "450ms" }}
+      style={{ animationDelay: "600ms" }}
     >
       <div className="flex justify-center mb-6">
         <div className="p-4 bg-avicola-green/20 rounded-full group-hover:bg-avicola-green/40 transition-colors">
@@ -77,25 +77,32 @@ const ProductsSection = () => {
 
   const products = [
     {
-      title: "Uova Fresche",
+      title: "Pollame Fresco",
       description:
-        "Direttamente dal nostro allevamento, consegnate ogni giorno",
+        "Tagli classici di pollo, gallina e tacchino di alta qualità",
       icon: Egg,
       delay: "0ms",
     },
     {
-      title: "Polli e Galline",
+      title: "Preparati Pronti da Cuocere",
       description:
-        "Pollame selezionato, allevato con cura e passione",
-      icon: Utensils,
+        "Involtini di pollo, spiedini di tacchino, bocconcini, fettine e nodini",
+      icon: ChefHat,
       delay: "150ms",
     },
     {
-      title: "Mangimi e Accessori",
+      title: "Specialità e Miste",
       description:
-        "Una selezione di mangimi e prodotti utili",
-      icon: Package,
+        "Salsiccia e cervellata di tacchino, fegatini, cuoricini, durelli",
+      icon: Heart,
       delay: "300ms",
+    },
+    {
+      title: "Prodotti Confezionati AIA e Amadori",
+      description:
+        "Selezione di prodotti delle migliori marche",
+      icon: ShoppingBag,
+      delay: "450ms",
     },
   ];
 
@@ -109,7 +116,7 @@ const ProductsSection = () => {
           Qualità genuina per ogni esigenza
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {products.map((product, index) => (
             <ProductCard
               key={index}

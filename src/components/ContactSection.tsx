@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare, Truck } from "lucide-react";
 
 const ContactItem = ({
   icon: Icon,
@@ -95,7 +95,8 @@ const ContactSection = () => {
                 onClick={() => {
                   window.open(
                     "https://wa.me/393922566798?text=Ciao,%20vorrei%20avere%20informazioni%20sui%20vostri%20prodotti.",
-                    "_blank"
+                    "_blank",
+                    "noopener noreferrer"
                   );
                 }}
               >
@@ -113,6 +114,43 @@ const ContactSection = () => {
               allowFullScreen
               loading="lazy"
             ></iframe>
+          </div>
+        </div>
+
+        {/* Sezione vendita all'ingrosso */}
+        <div className="mt-16 bg-white p-8 rounded-lg shadow-md border border-gray-100 animate-on-scroll">
+          <div className="flex items-center justify-center mb-6">
+            <div className="p-4 bg-avicola-green/20 rounded-full">
+              <Truck className="w-10 h-10 text-avicola-darkgreen" />
+            </div>
+          </div>
+          <h3 className="text-2xl font-bold text-center text-avicola-darkgreen mb-4">Vendita all'Ingrosso</h3>
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-lg mb-4">
+              Offriamo servizi di vendita all'ingrosso con spedizioni in tutta la Campania per rivenditori, ristoranti e attività commerciali.
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 my-6">
+              <div className="bg-avicola-tan/20 p-4 rounded-md">
+                <h4 className="font-semibold text-avicola-darkgreen mb-2">Spedizione in tutta la Campania</h4>
+                <p>Consegniamo i nostri prodotti freschi direttamente presso la tua attività</p>
+              </div>
+              <div className="bg-avicola-tan/20 p-4 rounded-md">
+                <h4 className="font-semibold text-avicola-darkgreen mb-2">Ritiro in Sede</h4>
+                <p>Possibilità di ritirare direttamente presso il nostro punto vendita a Frattaminore</p>
+              </div>
+            </div>
+            <Button
+              className="mt-4 bg-avicola-darkgreen hover:bg-avicola-green text-white"
+              onClick={() => {
+                window.open(
+                  "https://wa.me/393922566798?text=Ciao,%20sono%20interessato%20alla%20vendita%20all'ingrosso.",
+                  "_blank",
+                  "noopener noreferrer"
+                );
+              }}
+            >
+              Richiedi Informazioni per l'Ingrosso
+            </Button>
           </div>
         </div>
       </div>
